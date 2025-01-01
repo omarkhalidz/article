@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", serif;
+}
+.container {
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .page {
+  width: 750px;
+  height: 310px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  position: relative;
+}
+.container .page .img {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .page .img img {
+  width: 120%;
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+}
+.container .page .two {
+  width: 60%;
+  padding: 40px;
+  height: 100%;
+}
+.container .page .two h3 {
+  margin: 0 0 20px;
+  color: hsl(217, 19%, 35%);
+  font-size: 20px;
+}
+.container .page .two p {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.container .page .two .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.container .page .two .footer .icon {
+  display: flex;
+  align-items: center;
+}
+.container .page .two .footer .share {
+  position: relative;
+}
+.container .page .two .footer .share > .divOne {
+  position: absolute;
+  display: none;
+  align-items: center;
+  background-color: hsl(217, 19%, 35%);
+  padding: 12px 20px;
+  left: 50%;
+  top: -58px;
+  transform: translateX(-50%);
+  width: 188px;
+  border-radius: 7px;
+}
+.container .page .two .footer .share > .divOne.show {
+  display: flex;
+}
+.container .page .two .footer .share > .divTwo {
+  position: absolute;
+  border: 10px solid transparent;
+  border-top-color: hsl(217, 19%, 35%);
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  display: none;
+}
+.container .page .two .footer .share > .divTwo.show {
+  display: block;
+}
+
+.container .page .two .footer .share > div img {
+  margin-left: 15px;
+  width: 15px;
+}
+.container .page .two .footer .share > div span {
+  color: hsl(212, 23%, 69%);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.container .page .two .footer .share > img {
+  background-color: hsl(210, 46%, 95%);
+  padding: 12px;
+  border-radius: 50%;
+  width: 39px;
+  cursor: pointer;
+}
+.container .page .two .footer .share > img.clicked {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.container .page .two .footer .icon img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.container .page .two .footer .icon .txt h4 {
+  margin: 0;
+  color: hsl(217, 19%, 35%);
+  font-size: 15px;
+}
+.container .page .two .footer .icon .txt span {
+  color: hsl(212, 23%, 69%);
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .container .page {
+    height: 450px;
+    width: 320px;
+    flex-direction: column;
+  }
+  .container .page .img {
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+  }
+  .container .page .img img {
+    width: 100%;
+    height: 120%;
+    border-radius: 12px 12px 0 0;
+  }
+  .container .page .two {
+    width: 100%;
+    padding: 30px 20px 20px;
+    height: 60%;
+  }
+  .container .page .two h3 {
+    margin: 0 0 20px;
+    color: hsl(217, 19%, 35%);
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  .container .page .two .footer {
+    margin-top: 20px;
+  }
+  .container .page .two .footer .share {
+    position: unset;
+  }
+  .container .page .two .footer .share > .divOne {
+    position: absolute;
+    display: none;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    padding: 20px;
+    top: 382px;
+    left: 0;
+    transform: unset;
+    width: 320px;
+    border-radius: 0 0 12px 12px;
+    height: 66px;
+  }
+  .container .page .two .footer .share > .divOne.show {
+    display: flex;
+  }
+
+  .container .page .two .footer .share > .divTwo.show {
+    display: none;
+  }
+  .container .page .two .footer .share > img.clicked {
+    background-color: hsl(212, 23%, 69%);
+    position: relative;
+    z-index: 100;
+    margin-top: 6px;
+  }
+  .container .page .two .footer .icon .txt h4 {
+    font-size: 14px;
+  }
+  .container .page .two .footer .icon .txt span {
+    font-size: 12px;
+  }
+}
